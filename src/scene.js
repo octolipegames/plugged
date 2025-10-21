@@ -87,9 +87,9 @@ export class LevelsScene extends Phaser.Scene {
     updatedLevels = [];
     this.map = this.make.tilemap({ key: `lvl${currentLevel}` });
     let tileset = this.map.addTilesetImage('Tiles');
-    let layerCollision = this.map.createStaticLayer('Collision', tileset, 0, 0);
-    this.layerEvent = this.map.createDynamicLayer('Event', tileset, 0, 0);
-    let layerFloor = this.map.createStaticLayer('Floor', tileset, 0, 0);
+    let layerCollision = this.map.createLayer('Collision', tileset, 0, 0);
+    this.layerEvent = this.map.createLayer('Event', tileset, 0, 0);
+    let layerFloor = this.map.createLayer('Floor', tileset, 0, 0);
 
     layerCollision.depth = -10;
     this.layerEvent.depth = -5;
